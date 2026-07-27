@@ -267,7 +267,7 @@ const LANGUAGE_COPY = {
 const PROJECT_DETAILS = {
   crittos: {
     title: "Crittos - Dimostrazione AES-256",
-    image: "cr.png", // IMMAGINE CRITTOS
+    image: "img/cr.png", // IMMAGINE CRITTOS
     type: { it: "Crittografia / Web / C++ / iOS", en: "Cryptography / Web / C++ / iOS" },
     link: "https://piedigi.github.io/crittos/",
     linkLabel: "Apri Crittos Web",
@@ -284,7 +284,7 @@ const PROJECT_DETAILS = {
   },
   cookit: {
     title: "CookIT - Project Work",
-    image: "co.png", // IMMAGINE COOKIT
+    image: "img/co.png", // IMMAGINE COOKIT
     type: { it: "Mobile App / AI / PHP & MySQL", en: "Mobile App / AI / PHP & MySQL" },
     link: "http://pietronline.altervista.org/projectWork/login.php",
     linkLabel: "Visita CookIT",
@@ -301,7 +301,7 @@ const PROJECT_DETAILS = {
   },
   "resta-connesso": {
     title: "Resta Connesso (Gioco AI)",
-    image: "gi.png", // IMMAGINE RESTA CONNESSO
+    image: "img/gi.png", // IMMAGINE RESTA CONNESSO
     type: { it: "AI Game / Web Optimization", en: "AI Game / Web Optimization" },
     link: "http://pietronline.altervista.org/restaConnesso/successo.html",
     linkLabel: "Prova il gioco",
@@ -318,7 +318,7 @@ const PROJECT_DETAILS = {
   },
   carrello: {
     title: "E-Commerce Carrello & Sessioni",
-    image: "ca.png", // IMMAGINE CARRELLO
+    image: "img/ca.png", // IMMAGINE CARRELLO
     type: { it: "PHP / Sessioni / E-Commerce", en: "PHP / Sessions / E-Commerce" },
     link: "http://pietronline.altervista.org/sessoioni/carrello/index.php",
     linkLabel: "Vedi Carrello",
@@ -335,7 +335,7 @@ const PROJECT_DETAILS = {
   },
   "eden-cafe": {
     title: "Eden Cafè Reggio Emilia Demo",
-    image: "ed.jpg", // IMMAGINE EDEN CAFE
+    image: "img/ed.jpg", // IMMAGINE EDEN CAFE
     type: { it: "Web Design / UI Demo", en: "Web Design / UI Demo" },
     link: "https://eden-cafe-reggioemilia-demo.lovable.app/",
     linkLabel: "Visita la Demo",
