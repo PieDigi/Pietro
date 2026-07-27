@@ -2243,50 +2243,7 @@ if (document.readyState === "complete") {
   window.addEventListener("load", completeInitialLoad, { once: true });
 }
 
-/* ── Year navigation ── */
-const YEARS = ["2023-2024", "2024-2025", "2025-2026"];
-const YEAR_LABELS = { "2023-2024": "A.S. 2023/2024", "2024-2025": "A.S. 2024/2025", "2025-2026": "A.S. 2025/2026" };
-let currentYearIndex = 0;
-
-const getFirstCardForYear = (year) =>
-  projectGrid?.querySelector(`.project-card[data-year="${year}"]`) ?? null;
-
-const scrollToYear = (index) => {
-  const year = YEARS[index];
-  const target = getFirstCardForYear(year);
-  if (!target || !projectGrid) return;
-  const gridRect = projectGrid.getBoundingClientRect();
-  const cardRect = target.getBoundingClientRect();
-  projectGrid.scrollBy({ left: cardRect.left - gridRect.left, behavior: "smooth" });
-};
-
-const setYearIndex = (index) => {
-  currentYearIndex = index;
-  if (yearLabel) yearLabel.textContent = YEAR_LABELS[YEARS[index]];
-  if (yearPrevBtn) yearPrevBtn.disabled = index === 0;
-  if (yearNextBtn) yearNextBtn.disabled = index === YEARS.length - 1;
-  scrollToYear(index);
-};
-
-const detectCurrentYear = () => {
-  if (!projectGrid) return;
-  const gridLeft = projectGrid.getBoundingClientRect().left;
-  for (let i = YEARS.length - 1; i >= 0; i--) {
-    const card = getFirstCardForYear(YEARS[i]);
-    if (card && card.getBoundingClientRect().left - gridLeft <= 8) {
-      if (i !== currentYearIndex) {
-        currentYearIndex = i;
-        if (yearLabel) yearLabel.textContent = YEAR_LABELS[YEARS[i]];
-        if (yearPrevBtn) yearPrevBtn.disabled = i === 0;
-        if (yearNextBtn) yearNextBtn.disabled = i === YEARS.length - 1;
-      }
-      break;
-    }
-  }
-};
-
 // --- GESTIONE SCORRIMENTO CON LE FRECCE ---
-const projectGrid = document.getElementById('project-grid');
 const prevBtn = document.getElementById('prev-project');
 const nextBtn = document.getElementById('next-project');
 
