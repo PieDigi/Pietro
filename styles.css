@@ -7215,33 +7215,75 @@ body.is-low-memory-device .project-modal__proof-sheet-backdrop {
   gap: 2rem;
   width: 100%;
 }
+/* ==========================================================================
+   SEZIONE PROGETTI (Layout Consolidato & Ottimizzato)
+   ========================================================================== */
+
+/* Contenitore generale della sezione */
+.projects-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2.5rem 0;
+}
 
 @media (min-width: 992px) {
   .projects-section {
     display: grid;
-    grid-template-columns: 300px 1fr; /* Titolo a sx, griglia a dx */
+    /* Colonna sinistra per Titolo e Frecce (220px), colonna destra per le Card */
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
     align-items: start;
   }
 }
 
+/* Colonna Sinistra: Titolo ben visibile e Frecce */
+.projects-stage--left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projects-heading-copy h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.projects-heading-copy .eyebrow {
+  color: #888888;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+
+/* Colonna Destra: Contenitore FONDAMENTALE per non far traboccare il layout */
 .projects-stage--right {
   width: 100%;
-  overflow: hidden; /* Evita che rompa la pagina */
+  min-width: 0; 
+  overflow: hidden;
 }
 
-/* Griglia Card a scorrimento orizzontale */
+/* Griglia Card: Allineata a sinistra con scorrimento e aggancio magnetico */
 .project-grid {
   display: flex;
-  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1.25rem;
   overflow-x: auto;
-  padding-bottom: 1.5rem;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* Aggancia la card in automatico quando scori */
   -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0.5rem 1.5rem 0;
+  margin: 0;
+  width: 100%;
 }
 
-/* Nasconde la scrollbar antiestetica mantenendo lo scorrimento attivo */
+/* Scrollbar personalizzata per la griglia */
 .project-grid::-webkit-scrollbar {
-  height: 8px;
+  height: 6px;
 }
 .project-grid::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.05);
@@ -7252,10 +7294,11 @@ body.is-low-memory-device .project-modal__proof-sheet-backdrop {
   border-radius: 4px;
 }
 
-/* Dimensione fissa delle card per evitare che si schiaccino */
+/* Dimensioni della singola Card */
 .project-card {
-  flex: 0 0 320px; /* Larghezza fissa di 320px per card */
-  max-width: 320px;
+  flex: 0 0 300px;
+  max-width: 300px;
+  scroll-snap-align: start;
 }
 
 .project-card__button {
@@ -7268,57 +7311,18 @@ body.is-low-memory-device .project-modal__proof-sheet-backdrop {
   text-align: left;
   cursor: pointer;
   color: inherit;
-}
-/* Correggi il contenitore generale */
-.projects-section {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-@media (min-width: 992px) {
-  .projects-section {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-}
-
-/* FONDAMENTALE: impedisce che la colonna di destra spinga il layout fuori dallo schermo */
-.projects-stage--right {
-  width: 100%;
-  min-width: 0; 
-  overflow: hidden;
-}
-
-/* Griglia card: allineata a sinistra e scorrevole */
-.project-grid {
-  display: flex;
-  justify-content: flex-start; /* Forza l'inizio a sinistra */
-  align-items: stretch;
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 0.5rem 0 1.5rem 0;
-  margin: 0;
-  width: 100%;
-}
-
-.project-card {
-  flex: 0 0 320px; /* Larghezza fissa delle card */
-  max-width: 320px;
+  padding: 0;
 }
 
 /* Stili Pulsanti Frecce */
 .projects-nav-arrows {
   display: flex;
   gap: 0.75rem;
-  margin-top: 1.5rem;
 }
 
 .project-nav-btn {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
