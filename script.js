@@ -2285,6 +2285,23 @@ const detectCurrentYear = () => {
   }
 };
 
+// --- GESTIONE SCORRIMENTO CON LE FRECCE ---
+const projectGrid = document.getElementById('project-grid');
+const prevBtn = document.getElementById('prev-project');
+const nextBtn = document.getElementById('next-project');
+
+if (projectGrid && prevBtn && nextBtn) {
+  // Calcola lo scorrimento in base alla larghezza della card (320px) + il gap (24px)
+  const scrollDistance = 344;
+
+  prevBtn.addEventListener('click', () => {
+    projectGrid.scrollBy({ left: -scrollDistance, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    projectGrid.scrollBy({ left: scrollDistance, behavior: 'smooth' });
+  });
+}
 yearPrevBtn?.addEventListener("click", () => {
   if (currentYearIndex > 0) setYearIndex(currentYearIndex - 1);
 });
