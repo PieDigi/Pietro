@@ -110,19 +110,19 @@ const LANGUAGE_COPY = {
     ],
     assistant: {
       defaultAnswer:
-        "I'm Chris itang, a fifth-year student in IT at Blaise Pascal in Reggio Emilia (A.S. 2025/2026). I specialise in backend and software architecture with a focus on security. I also study piano at the Peri-Merulo Conservatory.",
+        "I'm Pietro itang, a fifth-year student in IT at Blaise Pascal in Reggio Emilia (A.S. 2025/2026). I specialise in backend and software architecture with a focus on security. I also study piano at the Peri-Merulo Conservatory.",
       defaultStatus: defaultAssistantStatus,
-      emptyQuestion: "Enter a question about Chris first, then I'll answer.",
+      emptyQuestion: "Enter a question about Pietro first, then I'll answer.",
       loadingAnswer: (question) => `Generating an answer about "${question}"...`,
-      loadingStatus: "Loading response about Chris, his skills and projects.",
-      followUpStatus: "You can ask another question about Chris's projects, skills, or background.",
+      loadingStatus: "Loading response about Pietro, his skills and projects.",
+      followUpStatus: "You can ask another question about Pietro's projects, skills, or background.",
       requestError: "Service unavailable. Reverted to default answer.",
       placeholder: "E.g.: What is your best project?",
       questions: [
         {
           label: "Who are you?",
           answer:
-            "I'm Chris itang, a fifth-year IT student at Blaise Pascal in Reggio Emilia. I specialise in backend development (Node.js, PHP) and software architecture with a focus on security. In my spare time I play piano at the Peri-Merulo Conservatory.",
+            "I'm Pietro itang, a fifth-year IT student at Blaise Pascal in Reggio Emilia. I specialise in backend development (Node.js, PHP) and software architecture with a focus on security. In my spare time I play piano at the Peri-Merulo Conservatory.",
         },
         {
           label: "What can you do?",
@@ -193,19 +193,19 @@ const LANGUAGE_COPY = {
     ],
     assistant: {
       defaultAnswer:
-        "Sono Chris itang, studente di quinto anno dell'indirizzo tecnico informatico al Blaise Pascal di Reggio Emilia (A.S. 2025/2026). Mi specializo in backend e architettura software con focus su sicurezza. Studio anche pianoforte al Conservatorio Peri-Merulo.",
+        "Sono Pietro Digitalino. Mi specializo in backend e architettura software con focus su sicurezza.",
       defaultStatus: "Clicca una domanda per saperne di più.",
-      emptyQuestion: "Inserisci prima una domanda su Chris, poi rispondo.",
+      emptyQuestion: "Inserisci prima una domanda su Pietro, poi rispondo.",
       loadingAnswer: (question) => `Elaboro una risposta su "${question}"...`,
-      loadingStatus: "Caricamento risposta su Chris, le sue competenze e i suoi progetti.",
-      followUpStatus: "Puoi fare un'altra domanda sui progetti, le competenze o il percorso di Chris.",
+      loadingStatus: "Caricamento risposta su Pietro, le sue competenze e i suoi progetti.",
+      followUpStatus: "Puoi fare un'altra domanda sui progetti, le competenze o il percorso di Pietro.",
       requestError: "Servizio non disponibile. Tornato alla risposta predefinita.",
       placeholder: "Es.: Qual è il tuo progetto migliore?",
       questions: [
         {
           label: "Chi sei?",
           answer:
-            "Sono Chris itang, frequento il quinto anno dell'indirizzo tecnico informatico al Blaise Pascal di Reggia Emilia. Mi specializo in backend (Node.js, PHP) e architettura software con focus su sicurezza. Nel tempo libero suono pianoforte al Conservatorio Peri-Merulo di Reggio Emilia.",
+            "Sono Pietro itang, frequento il quinto anno dell'indirizzo tecnico informatico al Blaise Pascal di Reggia Emilia. Mi specializo in backend (Node.js, PHP) e architettura software con focus su sicurezza. Nel tempo libero suono pianoforte al Conservatorio Peri-Merulo di Reggio Emilia.",
         },
         {
           label: "Cosa sai fare?",
@@ -267,7 +267,7 @@ const LANGUAGE_COPY = {
 const PROJECT_DETAILS = {
   crittos: {
     title: "Crittos - Dimostrazione AES-256",
-    image: "2ffd49e5-6d84-4c8f-bab1-1c93ea81a9de.png", // IMMAGINE CRITTOS
+    image: "cr.png", // IMMAGINE CRITTOS
     type: { it: "Crittografia / Web / C++ / iOS", en: "Cryptography / Web / C++ / iOS" },
     link: "https://piedigi.github.io/crittos/",
     linkLabel: "Apri Crittos Web",
@@ -284,7 +284,7 @@ const PROJECT_DETAILS = {
   },
   cookit: {
     title: "CookIT - Project Work",
-    image: "6d8d6b85-0983-4ee0-9fd2-e9fe6edce7d1.png", // IMMAGINE COOKIT
+    image: "co.png", // IMMAGINE COOKIT
     type: { it: "Mobile App / AI / PHP & MySQL", en: "Mobile App / AI / PHP & MySQL" },
     link: "http://pietronline.altervista.org/projectWork/login.php",
     linkLabel: "Visita CookIT",
@@ -301,7 +301,7 @@ const PROJECT_DETAILS = {
   },
   "resta-connesso": {
     title: "Resta Connesso (Gioco AI)",
-    image: "2510b6f0-d19c-41ff-9a1b-c6bb72c9464d.png", // IMMAGINE RESTA CONNESSO
+    image: "gi.png", // IMMAGINE RESTA CONNESSO
     type: { it: "AI Game / Web Optimization", en: "AI Game / Web Optimization" },
     link: "http://pietronline.altervista.org/restaConnesso/successo.html",
     linkLabel: "Prova il gioco",
@@ -318,7 +318,7 @@ const PROJECT_DETAILS = {
   },
   carrello: {
     title: "E-Commerce Carrello & Sessioni",
-    image: "9c2d3477-a911-49f9-b843-5abf380ba1c2.png", // IMMAGINE CARRELLO
+    image: "ca.png", // IMMAGINE CARRELLO
     type: { it: "PHP / Sessioni / E-Commerce", en: "PHP / Sessions / E-Commerce" },
     link: "http://pietronline.altervista.org/sessoioni/carrello/index.php",
     linkLabel: "Vedi Carrello",
@@ -335,7 +335,7 @@ const PROJECT_DETAILS = {
   },
   "eden-cafe": {
     title: "Eden Cafè Reggio Emilia Demo",
-    image: "0cede901-9600-4ec2-b547-ad119d2276a7.jpg", // IMMAGINE EDEN CAFE
+    image: "ed.jpg", // IMMAGINE EDEN CAFE
     type: { it: "Web Design / UI Demo", en: "Web Design / UI Demo" },
     link: "https://eden-cafe-reggioemilia-demo.lovable.app/",
     linkLabel: "Visita la Demo",
